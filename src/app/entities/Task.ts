@@ -5,16 +5,24 @@
 //   "doneAt": 1234567890
 // }
 
+
+export interface TaskObject {
+  text: string;
+  done: boolean;
+  createdAt: Date;
+  doneAt: Date | null;
+}
+
 export class Task {
   text: string;
   done: boolean;
-  createdAt: number;
+  createdAt: Date;
   doneAt: Date | null;
 
   constructor(text: string) {
     this.text = text;
     this.done = false;
-    this.createdAt = Date.now();
+    this.createdAt = new Date();
     this.doneAt = null;
   }
   
@@ -28,7 +36,7 @@ export class Task {
     this.doneAt = null;
   }
 
-  get object() {
+  get object() : TaskObject {
     return {
       text: this.text,
       done: this.done,
