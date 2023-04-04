@@ -6,7 +6,7 @@ export default interface TaskList {
    * @param {Task} task - The task to add.
    * @returns {Task} - The task added.
   */
-  addTask(task: TaskObject): Promise<TaskObject>;
+  addTask(task: TaskObject): Promise<void>;
 
   /**
  * Remove a task from the task list by its text.
