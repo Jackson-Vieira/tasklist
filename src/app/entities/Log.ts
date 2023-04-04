@@ -6,13 +6,6 @@
 
 // Log class
 
-export namespace LogType {
-  export const CREATED = "created";
-  export const UPDATED = "updated";
-  export const DELETED = "deleted";
-  export const DONE = "done";
-}
-
 export interface LogObject {
   text: string;
   createdAt: number;
@@ -30,7 +23,7 @@ export class Log {
     this.type = type;
   }
 
-  get object() : LogObject {
+  get object(): LogObject {
     return {
       text: this.text,
       createdAt: this.createdAt,

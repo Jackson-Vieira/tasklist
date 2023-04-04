@@ -1,4 +1,4 @@
-import { Task, TaskObject } from "../../entities";
+import { TaskObject } from "../../entities";
 
 export default interface TaskList {
   /**
