@@ -31,7 +31,7 @@ export default interface TaskList {
    * Mark a task as undone from the task list by its text.
    * @param {string} task_id - The text of the task to mark as undone.
   */
-  markTaskAsUndone(task_id: Task): Promise<void>;
+  markTaskAsUndone(task_id: string): Promise<void>;
 
   /**
    * Get all tasks from the task list.
